@@ -109,6 +109,4 @@ header{
       left: 39% /* Procent för att ha bilden i mitten*/
       /* Mediascreen och responsiviteten hade funkat mycket bätttre om jag gjort vissa grejer i flex/grid */
     }
-  }
-
 }
