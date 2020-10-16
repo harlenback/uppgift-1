@@ -1,0 +1,114 @@
+html{
+  background-color: lightgray;
+}
+
+body, ul, li, h1, h2, a{ 
+  margin: 0;
+  padding: 0;
+}/*sätter alla dessa classer till padding/margin 0, för att göra det snyggare (så att allt är placerat utan vitt område vid marginalerna) */
+
+header{
+    background-color: black;
+    padding: 20px;/* mellanrum mellan mitt namn och övrigt i bannern */
+    text-align: center; /*placerar texten i mitten*/
+    position: fixed; /*Ska vara fixerad överst på skärmen*/
+    width: 100%; /* så att headern täcker hela skärmen*/
+    z-index: 1; /*så att headern alltid är längst fram*/
+    }
+
+    header h1{
+        color: white; /*Bakgrundsfärg på hederns text*/
+        border: 4px dotted white; /*Storlek format och färg på bordern*/
+        padding: 20px; /*skapa utrymme för texten*/
+        display: inline-block; 
+        border-radius: 50px; /*Gör rundade kanter i bordern*/
+    }
+
+    .thailand img{ /* Div class bild*/
+    position: relative; /*Att bilden positionerar sig utifrån sin ursprungliga position*/
+    top: 125px; /*Gör så att bilden syns mer i överkant*/
+    max-width: 100%; /* Gör att bilden passar in i skärmens bredd*/
+    padding-bottom: 165px; /*Lägga till avståndet som bilden hade i position relative, nedåt*/
+  }
+
+  .martin img{
+    position: absolute; /*bilden ska vara på samma absoluta plats */
+    width: 25%; /*lagom storlek*/
+    top: 50%; /* Procent för att få bilden på migsjälv att hela tiden vara rätt placerad trots in/utzoomning*/
+    left: 39%; /* Procent för att ha bilden i mitten*/
+  }
+
+  .bilder {
+    position: sticky; /* Gör så att bilderna fastnar när man scrollar ner till dem */
+    top: 109px; /* Visar exakt var bilderna ska fastna */
+    text-align: center; /*centrerar bilderna*/
+  }
+
+  .bilder li{
+    display: inline-block; /*gör att bilderna i "listan" är i linje och ej under varandra*/
+    width: 20%; /*storleken på bilderna*/
+    margin: 1%; /*mellanrummet mellan bilderna*/
+    border: 5px solid black;
+  }
+
+  .bilder li img{
+    display: block; /*för att få bort det vita på 3px under bilden som kom när jag gjorde border*/
+    max-width: 100%; /*storlek på bilderna ser bra ut även vid zoom */
+    min-width: 100%; /*storlek på bilderna ser bra ut även vid zoom */
+  }
+
+  .textOmMartin{
+    padding: 25px 100px; /* Placeringen avstånd som är mindre upp än hö-ner-vä*/
+    font-size: 2em; /*dubbla textens storlek (både h och p)*/
+    font-family: 'Courier New', Courier, monospace /*Typsnittsfamil på texten om mig*/
+  }
+
+  span{
+    color: blue;
+    font-weight: bolder; /*Sätter färg och fetmarkering på span*/
+  }
+
+  .favoritlänkar{
+    position:sticky; /*Positionen ska fastna*/
+    top: 450px; /* Visar exakt var länkarna ska fastna */
+    /* width: 100%; */
+    display: flex; /*Testar enkel flexbox*/
+    flex-direction: row; /*länkarna ska ligga på rad*/
+    gap: 5%; /*Mellanrum mellan länkarna*/
+    background-color: black;
+    font-size: 20px;
+    margin-top: 150px; /*Skapar lite utrymme för att scrolla*/
+  }
+
+  .favoritlänkar a{
+  font-size: 2em; /*gör texten 2x stor*/
+  }
+
+  .fortsättscrolla{
+    position: sticky;
+    top: 600px;
+    font-size: 3em; /*Gör texten 3x stor*/
+    text-align: center; /*centrerar texten*/
+    color: red; /*Sätter färg på texten*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*specifik typsnittfamilj*/
+    margin-top: 150px;
+  }
+
+  .portfolio{
+    background-color: #F54C41;
+    text-align: center;
+    margin-top: 1000px;
+    font-size: 4em;
+  }
+
+  @media screen and (max-width: 800px){
+    .martin img{
+      position: absolute;
+      width: 25%;
+      top: 40%; /* Procent för att få bilden på migsjälv att hela tiden vara rätt placerad trots in/utzoomning*/
+      left: 39% /* Procent för att ha bilden i mitten*/
+      /* Mediascreen och responsiviteten hade funkat mycket bätttre om jag gjort vissa grejer i flex/grid */
+    }
+  }
+
+}
