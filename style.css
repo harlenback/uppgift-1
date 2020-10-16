@@ -1,6 +1,6 @@
 html{
   background-color: lightgray;
-}
+} /*Sätter bakgrunden på hela sidan*/
 
 body, ul, li, h1, h2, a{ 
   margin: 0;
